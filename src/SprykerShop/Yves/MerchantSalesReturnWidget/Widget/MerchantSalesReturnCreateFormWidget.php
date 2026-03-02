@@ -13,10 +13,6 @@ use Symfony\Component\Form\FormView;
 
 class MerchantSalesReturnCreateFormWidget extends AbstractWidget
 {
-    /**
-     * @param \Symfony\Component\Form\FormView $createReturnForm
-     * @param \Generated\Shared\Transfer\OrderTransfer $orderTransfer
-     */
     public function __construct(FormView $createReturnForm, OrderTransfer $orderTransfer)
     {
         $this->addCreateReturnFormParameter($createReturnForm);
@@ -24,37 +20,21 @@ class MerchantSalesReturnCreateFormWidget extends AbstractWidget
         $this->addMerchantReferencesParameter($orderTransfer);
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'MerchantSalesReturnCreateFormWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@MerchantSalesReturnWidget/views/merchant-sales-return-create-form-widget/merchant-sales-return-create-form-widget.twig';
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormView $createReturnForm
-     *
-     * @return void
-     */
     protected function addCreateReturnFormParameter(FormView $createReturnForm): void
     {
         $this->addParameter('createReturnForm', $createReturnForm);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OrderTransfer $orderTransfer
-     *
-     * @return void
-     */
     protected function addMerchantReferencesParameter(OrderTransfer $orderTransfer): void
     {
         $merchantReferences = $this->extractMerchantReferences($orderTransfer);
@@ -62,11 +42,6 @@ class MerchantSalesReturnCreateFormWidget extends AbstractWidget
         $this->addParameter('merchantReferences', $merchantReferences);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OrderTransfer $orderTransfer
-     *
-     * @return void
-     */
     protected function addOrderParameter(OrderTransfer $orderTransfer): void
     {
         $this->addParameter('order', $orderTransfer);
