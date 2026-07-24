@@ -13,11 +13,21 @@ use SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGe
 
 class MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin extends AbstractPlugin implements WidgetCacheKeyGeneratorStrategyPluginInterface
 {
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     */
     public function generateCacheKey(array $arguments = []): ?string
     {
         return null;
     }
 
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     */
     public function getWidgetClassName(): string
     {
         return MerchantSalesReturnCreateFormWidget::class;
