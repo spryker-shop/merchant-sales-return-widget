@@ -7,8 +7,6 @@ export default class SeparateReturnsByMerchant extends Component {
     protected checkboxComponentClassname: string;
     protected checkboxDisabledComponentClassname: string;
 
-    protected readyCallback() {}
-
     protected init() {
         this.checkedItems = [];
         this.merchantReferenceName = this.merchantReference;
