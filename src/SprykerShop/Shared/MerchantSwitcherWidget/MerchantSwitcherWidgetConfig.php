@@ -7,9 +7,9 @@
 
 namespace SprykerShop\Shared\MerchantSwitcherWidget;
 
-use Spryker\Shared\Kernel\AbstractBundleConfig;
+use Spryker\Shared\Kernel\AbstractSharedConfig;
 
-class MerchantSwitcherWidgetConfig extends AbstractBundleConfig
+class MerchantSwitcherWidgetConfig extends AbstractSharedConfig
 {
     /**
      * @var bool
